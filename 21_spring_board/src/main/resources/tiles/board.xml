@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="default" template="/WEB-INF/views/tiles/layout/layout.jsp"><!-- 일반적으로 화면 레이아웃 -->
+		<put-attribute name="header" value="/WEB-INF/views/tiles/layout/header.jsp"></put-attribute> <!-- 일반적으로 화면의 상단부(header, top) -->
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/layout/footer.jsp"></put-attribute> <!-- 일반적으로 화면의 하단부(footer, bottom) -->
+		<put-attribute name="side" value="/WEB-INF/views/tiles/layout/side.jsp"></put-attribute> <!-- 일반적으로 화면의 메뉴(menu, side, aside, nav) -->
+		
+		
+		
+	</definition>
+	<definition name="board/addBoard" extends="default">
+		<put-attribute name="board" value="/WEB-INF/views/board/addBoard.jsp"></put-attribute>
+		<put-attribute name="title" value="작성하기"></put-attribute>
+	 
+	</definition>
+	<definition name="board/boardList" extends="default">
+		<put-attribute name="board" value="/WEB-INF/views/board/boardList.jsp"></put-attribute>
+		<put-attribute name="title" value="보드리스트"></put-attribute>
+	 
+	</definition>
+	
+	<definition name="board/boardDetail" extends="default">
+		<put-attribute name="board" value="/WEB-INF/views/board/boardDetail.jsp"></put-attribute>
+		<put-attribute name="title" value="상세조회"></put-attribute>
+	 
+	</definition>
+	
+	<definition name="board/modifyBoard" extends="default">
+		<put-attribute name="board" value="/WEB-INF/views/board/modifyBoard.jsp"></put-attribute>
+		<put-attribute name="title" value="보드리스트"></put-attribute>
+	 
+	</definition>
+	
+	<definition name="board/removeBoard" extends="default">
+		<put-attribute name="board" value="/WEB-INF/views/board/removeBoard.jsp"></put-attribute>
+		<put-attribute name="title" value="보드리스트"></put-attribute>
+	 
+	</definition>
+	
+	
+
+
+</tiles-definitions>
